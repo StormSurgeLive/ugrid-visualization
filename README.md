@@ -17,5 +17,5 @@ Specific software requirements will be listed in each subdirectory's Readme file
 The main audience for these resources is ADCIRC users, or anyone who works with ADCIRC output. Therefore, it's expected that you have some familiarity with the types of ADCIRC output, especially `maxele.63` files and `fort.63` files. 
 
 If you don't have previous knowledge of ADCIRC and its output but want to follow along with the tutorials, you can refer to the following resources for some background information:
-* Introduction to ADCIRC: <a href="https://adcirc.org/home/documentation/users-manual-v50/introduction/" target="_blank">https://adcirc.org/home/documentation/users-manual-v50/introduction/</a>
-* Types of ADCIRC output (most relevant for this repository are maxele.63, fort.63, and fort.74): <a href="https://adcirc.org/home/documentation/users-manual-v53/output-file-descriptions/" target="_blank">https://adcirc.org/home/documentation/users-manual-v53/output-file-descriptions/</a>
+* Introduction to ADCIRC: https://adcirc.org/home/documentation/users-manual-v50/introduction/
+* Types of ADCIRC output (most relevant for this repository are maxele.63, fort.63, and fort.74): https://adcirc.org/home/documentation/users-manual-v53/output-file-descriptions/
