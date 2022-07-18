@@ -23,7 +23,7 @@ Ubuntu Linux, you can download these tools with the following commands:
 $ sudo apt install netcdf-bin
 $ sudo apt install nco
 ```
-The `netcdf-bin` package includes some basic netCDF tools made by the netCDF developers, and the `nco` (NetCDF Operators) package includes more advanced tools.
+You may need to run `sudo apt update && sudo apt upgrade` beforehand if the packages can't be found. The `netcdf-bin` package includes some basic netCDF tools made by the netCDF developers, and the `nco` (NetCDF Operators) package includes more advanced tools.
 
 On Mac, the following commands may work to get these tools:
 ```
