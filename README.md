@@ -6,9 +6,9 @@ Resources for the visualization of output files from the ADCIRC ocean circulatio
 
 This repository is divided into 3 subdirectories:
 
+* `ugrid-visualization/ugrid-cf-resources` - Background information for understanding and working with ADCIRC netCDF files. This is a good place to start if you don't have much experience with netCDF files.
 * `ugrid-visualization/paraview` - Scripts for automating the visualization of ADCIRC output using ParaView through the command line (no GUI), along with tutorials.
 * `ugrid-visualization/qgis` - Tutorials for visualizing ADCIRC output with QGIS, including some QGIS-specific files for streamlining this process.
-* `ugrid-visualization/ugrid-cf-resources` - Background information for understanding and working with ADCIRC netCDF files.
 
 ## Requirements and expected background knowledge
 
