@@ -10,9 +10,20 @@ You'll need to use a Linux command line for the ParaView tutorials, so any instr
 
 ## Building the `generateXDMF.x` utility
 
-Before you can build the XDMF generation utility, you'll need to install some packages that it depends on. 
-
-The utility for generating XDMF files from ADCIRC output is included in the ASGS repository (https://github.com/StormSurgeLive/asgs). You can download this repository using `git clone`. Once you've downloaded it, move into the `asgs/output` directory.
+Before you can build the XDMF generation utility, you'llto install some packages that it depends on. On Ubuntu Linux, these are:
+```
+$ sudo apt install make
+$ sudo apt install gfortran
+$ sudo apt install libnetcdff-dev
+```
+The utility for generating XDMF files from ADCIRC output is included in the ASGS repository (https://github.com/StormSurgeLive/asgs). You can download this repository using `git clone`:
+```
+$ git clone https://github.com/StormSurgeLive/asgs.git
+```
+Once you've downloaded the repository, move into the `asgs/output` directory. Run the following command to build the XDMF generation utility (this also builds other `asgs` utilities, although these won't be used for the ParaView tutorials):
+```
+$ make all compiler=gfortran NETCDF=enable NETCDF4=enable NETCDF4_COMPRESSION=enable
+```
 
 
 
