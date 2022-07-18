@@ -12,7 +12,7 @@ This repository is divided into 3 subdirectories:
 
 ## Requirements and expected background knowledge
 
-Specific software requirements will be listed in each subdirectory's Readme file. The most basic requirement is access to a Unix shell that can run a package manager. To follow along with the tutorials in this repository, it's expected that you have at least some experience with running commands and command-line tools on a Unix shell. 
+Specific software requirements will be listed in each subdirectory's Readme file. The most basic requirement is access to a Unix shell that can run a package manager. To follow along with the tutorials in this repository, it's expected that you have at least some experience with running commands and command-line tools on a Unix shell. To reproduce examples that use Ubuntu Linux-based commands, it's also expected that you have access to `sudo` to install packages through `apt`.
 
 The main audience for these resources is ADCIRC users, or anyone who works with ADCIRC output. Therefore, it's expected that you have some familiarity with the types of ADCIRC output, especially `maxele.63` files and `fort.63` files. 
 
