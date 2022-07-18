@@ -288,3 +288,7 @@ $ ncatted -h -a topology_dimension,adcirc_mesh,o,i,2 maxele.63.nc
 The `-h` flag doesn't refer to the netCDF header here. When using a utility from the `nco` package, the `-h` flag can be included to prevent the command you ran to be added to the file's `history` global attribute. If you do want to have a record of that command, you can remove the `-h` flag. For more information about the meaning of `ncatted` flags and parameters, you can run `ncatted --help` for a brief summary.
 
 ## A note on CF compliance of ADCIRC output
+
+As of July 2022, there are some discrepancies between the metadata in ADCIRC netCDF files and the CF conventions. Some of these discrepancies are due to incorrect metadata, and others are due to the fact that UGRID hasn't yet been formally incorporated into CF (and will remain unavoidable until UGRID and CF are merged).
+
+These differences shouldn't cause any issues for the visualization tutorials in this repository, which use ParaView and QGIS. However, if you want to read more about this topic, refer to the `ADCIRC_UGRID_CF_Changes.pdf` document in this directory. This document also includes information about CF compliance checkers.
