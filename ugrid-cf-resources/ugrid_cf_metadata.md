@@ -34,12 +34,12 @@ If you need a sample netCDF file, you can download an ADCIRC maxele.63 with the 
 ```
 $ wget https://fortytwo.cct.lsu.edu/thredds/fileServer/2020/laura/27/CTXCS2017/qbc.loni.org/CTXCS2017_al132020_jgf/nhcConsensus/maxele.63.nc
 ```
-This file has maximum water surface elevation data representing the storm surge due to Hurricane Laura (2020). The file size is ~129 MB.
+This file has maximum water surface elevation data for the storm surge due to Hurricane Laura (2020). The file size is ~129 MB.
 
 ## Quick overview of a netCDF file
 
-The simplest way to understand the contents of a netCDF file is to view the contents of the file's header, which contains a summary of its metadata.
-To view a file's header, use the `ncdump` utility with the `-h` flag (on Ubuntu, this utility is included in the `netcdf-bin` package). Make sure not to miss the `-h`
+The simplest way to understand the contents of a netCDF file is to view the file's header, which contains a summary of its metadata.
+To view a file's header, use the `ncdump` utility with the `-h` flag (on Ubuntu, this utility is included in the `netcdf-bin` package, and should be on your path once you've installed `netcdf-bin`). Make sure not to miss the `-h`
 flag; otherwise, ncdump will try to display the entire contents of the file, which may be a very large amount of data.
 
 Here's the result of running `ncdump -h` on the sample maxele.63 file from the [Software requirements](#Software-requirements) section:
