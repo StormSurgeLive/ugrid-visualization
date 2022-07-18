@@ -1,5 +1,7 @@
 # UGRID Visualization
 
+![](https://github.com/StormSurgeLive/ugrid-visualization/blob/main/paraview/tutorial-figures/latx_2D_fort63_anim.gif)
+
 Resources for the visualization of output files from the ADCIRC ocean circulation model in netCDF format. You can find general resources for understanding and working with ADCIRC netCDF files, as well as tutorials and scripts to facilitate the visualization of ADCIRC output with ParaView and QGIS. ADCIRC output in netCDF format is based on the CF and UGRID conventions, so if you use a different model that also outputs data based on these conventions, the resources in this repository may be relevant as well.
 
 ## Repository structure
