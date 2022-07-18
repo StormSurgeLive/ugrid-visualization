@@ -198,7 +198,7 @@ dimensions:
         node = 4535035 ;
         nele = 8975076 ;
 ```
-The properties listed under each variable are known as CF attributes. The time variable is defined relative to a specified date/time, so the `time:units` attribute
+The properties listed under each variable are known as "attributes". The time variable is defined relative to a specified date/time, so the `time:units` attribute
 is needed to interpret the raw time values:
 ```
         double time(time) ;
@@ -250,3 +250,41 @@ Finally, the following variables define the bathymetry/topography and water surf
                 zeta_max:_FillValue = -99999. ;
 ````
 ## What to do if your file is missing UGRID metadata
+
+If the header of your netCDF file looks similar to the example shown above, then you're probably ready to try out the ParaView and QGIS tutorials in this repository. However, depending on how your ADCIRC output has been generated, it may be the case that some attributes needed to indicate key UGRID and CF metadata are missing, leading to errors when you try to visualize your file.
+
+For example, note the differnce between the attributes of the following `adcirc_mesh` variable:
+```
+        int adcirc_mesh(single) ;
+                adcirc_mesh:long_name = "mesh topology" ;
+                adcirc_mesh:standard_name = "mesh_topology" ;
+                adcirc_mesh:dimension = 2 ;
+                adcirc_mesh:node_coordinates = "x y" ;
+                adcirc_mesh:face_node_connectivity = "element" ;
+```
+and the attributes of the `adcirc_mesh` variable in the header of the maxele.63 file from earlier:
+```
+        int adcirc_mesh(mesh) ;
+                adcirc_mesh:long_name = "mesh_topology" ;
+                adcirc_mesh:cf_role = "mesh_topology" ;
+                adcirc_mesh:topology_dimension = 2 ;
+                adcirc_mesh:node_coordinates = "x y" ;
+                adcirc_mesh:face_node_connectivity = "element" ;
+```
+In the first example, we are missing the `cf_role` attribute, and there is a `dimension` attribute instead of `topology_dimension`. These are both required attributes in the UGRID convention, and will lead to errors if the visualization software you're using expects UGRID metadata.
+
+If you think you're running into issues due to missing metadata, you can compare the `ncdump -h` output from your file to the output for the sample maxele.63 file used for the examples in this document, and see if you're missing any attributes (especially in the key sections listed in the [Key parts of an ADCIRC netCDF header](#Key-parts-of-an-ADCIRC-netCDF-header) section.
+
+Another option is to use the `ugrid-checks` utility developed by Patrick Peglar and available on GitHub (https://github.com/pp-mo/ugrid-checks). You can find installation instructions and usage examples on the `ugrid-checks` repository. However, note that as of July 2022, this utility is still in fairly early development, so it may not cover all UGRID errors.
+
+Once you've determined which attributes you're missing, you can use the `ncatted` utility (from the `nco` package) to make the needed changes. **Note that `ncatted` permanently changes your netCDF file**, so if you want to keep you original file, make sure to make a copy before changing any metadata. 
+
+For example, in the first `adcirc-mesh` variable shown earlier in this section, we need to add a `cf_role`, delete the `dimension`, and add a `topology_dimension`. You can make these changes with the following commands (assuming the file with missing metadata is also called `maxele.63.nc`):
+```
+$ ncatted -h -a cf_role,adcirc_mesh,o,c,"mesh_topology" maxele.63.nc
+$ ncatted -h -a dimension,adcirc_mesh,d,, maxele.63.nc
+$ ncatted -h -a topology_dimension,adcirc_mesh,o,i,2 maxele.63.nc
+```
+The `-h` flag doesn't refer to the netCDF header here. When using a utility from the `nco` package, the `-h` flag can be included to prevent the command you ran to be added to the file's `history` global attribute. If you do want to have a record of that command, you can remove the `-h` flag. For more information about the meaning of `ncatted` flags and parameters, you can run `ncatted --help` for a brief summary.
+
+## A note on CF compliance of ADCIRC output
