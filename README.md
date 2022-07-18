@@ -19,3 +19,8 @@ The main audience for these resources is ADCIRC users, or anyone who works with 
 If you don't have previous knowledge of ADCIRC and its output but want to follow along with the tutorials, you can refer to the following resources for some background information:
 * Introduction to ADCIRC: https://adcirc.org/home/documentation/users-manual-v50/introduction/
 * Types of ADCIRC output (most relevant for this repository are maxele.63, fort.63, and fort.74): https://adcirc.org/home/documentation/users-manual-v53/output-file-descriptions/
+
+## Author information
+The tutorials and resources in this repository were developed by Marcos Botto Tornielli (Scientific Visualization Developer for Seahorse Coastal Consulting between April and July 2022).
+
+For any questions, please contact me at mbottot@mit.edu.
