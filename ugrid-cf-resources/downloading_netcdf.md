@@ -12,7 +12,7 @@ Ubuntu Linux, you can download these tools with the following command:
 ```
 $ sudo apt install nco
 ```
-The `nco` (NetCDF Operators) package includes the `ncks` utility which will be used for the examples in this document.
+You may need to run `sudo apt update && sudo apt upgrade` beforehand if the package can't be found. The `nco` (NetCDF Operators) package includes the `ncks` utility which will be used for the examples in this document.
 
 On Mac, the following command should work to install `nco`:
 ```
