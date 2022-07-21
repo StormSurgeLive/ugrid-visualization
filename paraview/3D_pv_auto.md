@@ -18,6 +18,7 @@ Once you're caught up with the Getting Started steps, you'll need to install the
 $ sudo apt install nco
 $ sudo apt install ffmpeg
 ```
+You may need to run `sudo apt update && sudo apt upgrade` beforehand if any packages can't be found.
 
 You'll also need files from the `ugrid-visualization/paraview/automation-scripts` and `ugrid-visualization/paraview/color-maps` directories, so you can either clone this repository or download the files manually. The specific files you'll need are both color maps in the `color-maps` directory, and `pvadcirc_auto.sh`, `latx_3D_maxele.py`, and `latx_3D_fort63.py` from the `automation-scripts` directory.
 
