@@ -15,7 +15,12 @@ CMAP_DIR=${CMAP_DIR:-"$PWD"}
 
 # Paths for automation of running commands
 # ParaView installation directory
-PV_DIR=
+if [ -z "$PV_DIR" ] ; then
+    echo "PV_DIR has not been set as an environment variable. Exiting..."
+    exit 1
+else
+    PV_DIR="$PV_DIR"
+fi
 # Directory where pvpython scripts are located
 SCRPT_DIR=${SCRPT_DIR:-"$PWD"}
 
