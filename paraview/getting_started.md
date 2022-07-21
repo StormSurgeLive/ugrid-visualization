@@ -43,7 +43,7 @@ The ParaView automation scripts used for the tutorials were developed for ParaVi
 
 You can run the following command to download ParaView 5.9.1 for Linux through the command line:
 ```
-wget -O ParaView-5.9.1-osmesa-MPI-Linux-Python3.8-64bit.tar.gz "https://www.paraview.org/paraview-downloads/download.php?submit=Download&version=v5.9&type=binary&os=Linux&downloadFile=ParaView-5.9.1-osmesa-MPI-Linux-Python3.8-64bit.tar.gz"
+$ wget -O ParaView-5.9.1-osmesa-MPI-Linux-Python3.8-64bit.tar.gz "https://www.paraview.org/paraview-downloads/download.php?submit=Download&version=v5.9&type=binary&os=Linux&downloadFile=ParaView-5.9.1-osmesa-MPI-Linux-Python3.8-64bit.tar.gz"
 ```
 If you'd prefer to download through a browser, you can find the download links at the following page:
 ```
