@@ -16,6 +16,8 @@ $ sudo apt install make
 $ sudo apt install gfortran
 $ sudo apt install libnetcdff-dev
 ```
+You may need to run `sudo apt update && sudo apt upgrade` beforehand if some of the packages can't be found.
+
 The utility for generating XDMF files from ADCIRC output is included in the ASGS repository (https://github.com/StormSurgeLive/asgs). You can download this repository using `git clone`:
 ```
 $ git clone https://github.com/StormSurgeLive/asgs.git
