@@ -10,7 +10,7 @@ You'll need to use a Linux command line for the ParaView tutorials, so any instr
 
 ## Building the `generateXDMF.x` utility
 
-Before you can build the XDMF generation utility, you may need to install some packages that the build process depends on. On Ubuntu Linux, these are:
+Before you can build the XDMF generation utility, you'll need to install some packages that the build process depends on. On Ubuntu Linux, these are:
 ```
 $ sudo apt install make
 $ sudo apt install gfortran
