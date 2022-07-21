@@ -35,6 +35,8 @@ Now, use the `generateXDMF.x` utility to generate the additional XDMF files that
 $ ./generateXDMF.x --datafile maxele.63.nc
 $ ./generateXDMF.x --datafile fort.63.nc
 ```
+These commands assume that you've copied the `generateXDMF.x` executable to same directory where you downloaded the `maxele.63.nc` and `fort.63.nc` files.
+
 **Make sure that your netCDF files and XDMF files are all in the same directory**; otherwise, ParaView won't be able to read the netCDF files.
 
 ## Understanding the automation scripts
