@@ -51,20 +51,20 @@ The Bash script has several parameters that you can customize to control the aut
 * `ZETA_BND`: An integer that defines the upper bound for the water surface elevation color map, in meters.
 * `START_T` and `FINAL_T`: Integers that define the index of the first and last timesteps that you want to include in the fort.63 animation.
 * `C_EMAIL`: A contact email address that will be displayed in an annotation on the figures.
-* `FILE_CLEAN`: A Boolean paramater that toggles file cleanup on or off. Some temporary files are generated that aren't needed once the figures have been saved, so this parameter allows you to delete them (leaving only the PNG and GIF figures as output). If you want to keep these files, set this parameter to `false` (for example, if you want to keep the individual frames as PNG files).
+* `FILE_CLEAN`: A Boolean paramater that toggles file cleanup on or off. Some temporary files are generated that aren't needed once the figures have been saved, so this parameter allows you to delete them (leaving only the PNG and GIF figures as output). If you want to keep these files, set this parameter to `false` (for example, if you want to keep the individual frames of the fort.63 animation as PNG files).
 
 ## Setting the `pvadcirc_auto.sh` parameters
 
 To facilitate automation, almost all of the parameters are set from environment variables, with a default value as a backup if you haven't set the corresponding environment variable. These are the default values:
 
 * `IN_DIR`, `OUT_DIR`, `CMAP_DIR`, and `SCRPT_DIR`: The default value for all of these parameters is the current working directory where you're running the Bash script.
-* `ZOOM_AREA`: This has an empty default value, which is what we'll use in this tutorial.
-* * `ZETA_BND`: Default value is 5 (meters). This value is intended for strong hurricanes, so you may have to set the parameter to a lower value.
+* `ZOOM_AREA`: This has an empty default value, which is what you'll use in this tutorial.
+* `ZETA_BND`: Default value is 5 (meters). This value is intended for strong hurricanes, so you may have to set the parameter to a lower value.
 * `START_T` and `END_T`: Default values are 0 and 9. Since the GIF is generated at 10fps, this means that by default, you'll generate a 1-second GIF from the first 10 timesteps of your fort.63 file.
 * `C_EMAIL`: Default value is a placeholder email address, "placeholder@email.com"
 * `FILE_CLEAN`: Default value is `true`, which means any temporary files are deleted once the figures have been saved.
 
-The only exception is `PV_DIR`; to set this parameter, you'll need to edit the Bash script (line 18 is where you set `PV_DIR`). For example, if you downloaded the recommended ParaView version in the [Getting Started](https://github.com/StormSurgeLive/ugrid-visualization/blob/main/paraview/getting_started.md) tutorial, you'll have a directory named `ParaView-5.9.1-osmesa-MPI-Linux-Python3.8-64bit` that contains your ParaView installation. Suppose you've created this directory in your home Linux directory; then the value of `PV_DIR` could be something like `/home/$USER/ParaView-5.9.1-osmesa-MPI-Linux-Python3.8-64bit' and you should edit line 18 of `pvadcirc_auto.sh` to (making sure not to include a trailing slash):
+The only exception is `PV_DIR`; to set this parameter, you'll need to edit the Bash script (line 18 is where you set `PV_DIR`). For example, if you downloaded the recommended ParaView version in the [Getting Started](https://github.com/StormSurgeLive/ugrid-visualization/blob/main/paraview/getting_started.md) tutorial, you'll have a directory named `ParaView-5.9.1-osmesa-MPI-Linux-Python3.8-64bit` that contains your ParaView installation. Suppose you've created this directory in your home Linux directory; then the value of `PV_DIR` could be something like `/home/$USER/ParaView-5.9.1-osmesa-MPI-Linux-Python3.8-64bit` and you should edit line 18 of `pvadcirc_auto.sh` to (making sure not to include a trailing slash):
 ```
 PV_DIR="/home/$USER/ParaView-5.9.1-osmesa-MPI-Linux-Python3.8-64bit"
 ```
@@ -74,8 +74,17 @@ Note that the `pvadcirc_auto.sh` script in this repository has an empty `PV_DIR`
 
 Since `IN_DIR`, `OUT_DIR`, `CMAP_DIR`, and `SCRPT_DIR` all have a default value of the current working directory, the simplest way to run the Bash script is to move your ADCIRC netCDF files, XDMF files, color map files, and automation scripts all to the same directory, and then run the bash script from there.
 
-Suppose you're in a directory that contains all of these files, and for simplicity, suppose you've also moved the `pvadcirc_auto.sh` to this directory as well. In this case, to reproduce the figures from the [Background](#Background) section, the only parameter you need to set before running the script is `FINAL_T`, since the GIF was made from 20 timesteps rather than the default 10. If you've edited the Bash script to enter the path to your ParaView installation, you can run the bash script with the following commands:
+Suppose you're in a directory that contains all of these files, and for simplicity, suppose you've also moved the `pvadcirc_auto.sh` to this directory as well. In this case, to reproduce the figures from the [Background](#Background) section, the only parameter you need to set before running the script is `FINAL_T`, since the GIF was made from 20 timesteps rather than the default 10. Once you've edited the Bash script to enter the path to your ParaView installation, you can run the script with the following commands:
 ```
+$ export FINAL_T=19
+$ bash pvadcirc_auto.sh
+```
+You should now have the files `latx_2D_maxele_img.png` and `latx_2D_fort63_anim.gif` in the same directory where you ran the script.
+
+A more customized run where the files are spread out across different directories might look something like this:
+```
+$ export IN_DIR="/home/$USER/adcirc-output" && export OUT_DIR="/home/$USER/figures" && export CMAP_DIR="/home/$USER/color-maps"
+$ export SCRPT_DIR="/home/$USER/paraview-scripts"
 $ export FINAL_T=19
 $ bash pvadcirc_auto.sh
 ```
