@@ -25,3 +25,6 @@ Before reading the tutorial documents in this directory, it's recommended that y
 
 There'a also a [tutorial](https://www.lutraconsulting.co.uk/blog/2019/08/26/foss4g-workshop/) by the developers of the QGIS mesh capabilties for loading and visualizing a sample netCDF dataset.
 
+## Credits
+
+The `fix_adcirc_modwind.py` script in the `qgis-files/` directory is a modified version of a script developed by Marcelo Andrioni (https://github.com/marceloandrioni). You can find the original script in [this GitHub discussion](https://github.com/lutraconsulting/MDAL/issues/155).
