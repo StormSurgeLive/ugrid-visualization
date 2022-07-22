@@ -13,7 +13,7 @@ $ ncks -7 -h -L 5 -d time,0,9 -d time,10,19 'http://fortytwo.cct.lsu.edu/thredds
 ```
 For more information about these commands, refer to the [Downloading ADCIRC NetCDF Output Files from a THREDDS Server](https://github.com/StormSurgeLive/ugrid-visualization/blob/main/ugrid-cf-resources/downloading_netcdf.md) tutorial. The file sizes are ~387 MB for the fort.63 and ~1.1 GB for the fort.74, so they will take a few seconds to download.
 
-You will also need the files `fix_adcirc_modwind.py`, `fort63_style_file.qml`, and `color_bar_qgis.png` from the `ugrid-visualization/qgis/qgis-files` directory.
+You will also need the files [`fix_adcirc_modwind.py`](https://github.com/StormSurgeLive/ugrid-visualization/blob/main/qgis/qgis-files/fix_adcirc_modwind.py), [`fort63_style_file.qml`](https://github.com/StormSurgeLive/ugrid-visualization/blob/main/qgis/qgis-files/fort63_style_file.qml), and [`color_bar_qgis.png`](https://github.com/StormSurgeLive/ugrid-visualization/blob/main/qgis/qgis-files/color_bar_qgis.png) from the `ugrid-visualization/qgis/qgis-files` directory.
 
 ## Generating a combined fort.63 and fort.74 file
 
@@ -102,3 +102,7 @@ You can also use the Temporal Contoller Panel to save frames which you can use t
 This will only save the frames, so you'll need to generate the animation outside of QGIS. For example, here is a GIF made from animation frames exported from QGIS:
 
 ![](https://github.com/StormSurgeLive/ugrid-visualization/blob/main/qgis/tutorial-figures/tutorial_figure_2.gif)
+
+## Visualizing other fort.63 and fort.74 files
+
+The `fort63_style_file.qml` is intended for the specific sample files used in this tutorial, so it may not work with other fort.63 and fort.74 files. However, if you want to use the same color mapping and wind vector properties for your own files, you can open [the Layer Styling Panel](https://docs.qgis.org/3.22/en/docs/user_manual/introduction/general_tools.html#layer-styling-panel) and see which parameters and settings have been modified.
