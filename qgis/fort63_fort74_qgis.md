@@ -103,6 +103,33 @@ This will only save the frames, so you'll need to generate the animation outside
 
 ![](https://github.com/StormSurgeLive/ugrid-visualization/blob/main/qgis/tutorial-figures/tutorial_figure_2.gif)
 
+## Adding a time annotation
+
+Another type of annotation you can add is a time annotation. After enabling the Temporal Controller Panel, go to to View menu at the uppermost toolbar and select "Decorations" -> "Title Label...":
+
+![](https://github.com/StormSurgeLive/ugrid-visualization/blob/main/qgis/tutorial-figures/tutorial_screenshot_20.png)
+
+This will open the Title Label Decoration menu, where you need to check the "Enable Title Label" checkbox:
+
+![](https://github.com/StormSurgeLive/ugrid-visualization/blob/main/qgis/tutorial-figures/tutorial_screenshot_21.png)
+
+To add a time annotation, copy this line into the "Title label text" box:
+```
+[%format_date(@map_start_time, 'yyyy-MM-dd HH:mm:ss UTC')%]
+```
+
+![](https://github.com/StormSurgeLive/ugrid-visualization/blob/main/qgis/tutorial-figures/tutorial_screenshot_22.png)
+
+The default font size for this annotation is fairly small, so you'll probably have to adjust it. You can also customize the placement of the annotation and the background color. By default, this annotation will have a grey background; if you want only the text to show up without any background, open the "Bckground bar color" menu and move the slider all the way to the left:
+
+![](https://github.com/StormSurgeLive/ugrid-visualization/blob/main/qgis/tutorial-figures/tutorial_screenshot_23.png)
+
+Make sure that you've enabled time navigation on the Temporal Controller Panel; otherwise, the time annotation won't show up in the Map canvas.
+
+Here is an example of an animation that includes the time annotation:
+
+![](https://github.com/StormSurgeLive/ugrid-visualization/blob/main/qgis/tutorial-figures/tutorial_figure_3.gif)
+
 ## Visualizing other fort.63 and fort.74 files
 
 The `fort63_style_file.qml` is intended for the specific sample files used in this tutorial, so it may not work with other fort.63 and fort.74 files. However, if you want to use the same color mapping and wind vector properties for your own files, you can open [the Layer Styling Panel](https://docs.qgis.org/3.22/en/docs/user_manual/introduction/general_tools.html#layer-styling-panel) and see which parameters and settings have been modified.
