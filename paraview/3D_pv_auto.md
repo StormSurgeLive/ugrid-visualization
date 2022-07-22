@@ -20,7 +20,9 @@ $ sudo apt install ffmpeg
 ```
 You may need to run `sudo apt update && sudo apt upgrade` beforehand if any packages can't be found.
 
-You'll also need files from the `ugrid-visualization/paraview/automation-scripts` and `ugrid-visualization/paraview/color-maps` directories, so you can either clone this repository or download the files manually. The specific files you'll need are both color maps in the `color-maps` directory, and `pvadcirc_auto.sh`, `latx_3D_maxele.py`, and `latx_3D_fort63.py` from the `automation-scripts` directory.
+You'll also need files from the `ugrid-visualization/paraview/automation-scripts` and `ugrid-visualization/paraview/color-maps` directories, so you can either clone this repository or download the files manually. The specific files you'll need are:
+* Both color maps in the `color-maps` directory ([`RdYlBu_Brewer.xml`](https://github.com/StormSurgeLive/ugrid-visualization/blob/main/paraview/color-maps/RdYlBu_Brewer.xml) and [`blueBrownGreenBathyTopoColorMap.xml`](https://github.com/StormSurgeLive/ugrid-visualization/blob/main/paraview/color-maps/blueBrownGreenBathyTopoColorMap.xml))
+* [`pvadcirc_auto.sh`](https://github.com/StormSurgeLive/ugrid-visualization/blob/main/paraview/automation-scripts/pvadcirc_auto.sh), [`latx_3D_maxele.py`](https://github.com/StormSurgeLive/ugrid-visualization/blob/main/paraview/automation-scripts/latx_3D_maxele.py), and [`latx_3D_fort63.py`](https://github.com/StormSurgeLive/ugrid-visualization/blob/main/paraview/automation-scripts/latx_3D_fort63.py) from the `automation-scripts` directory.
 
 ## Downloading sample ADCIRC output data and generating XDMF files
 
