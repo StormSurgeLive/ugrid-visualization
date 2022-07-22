@@ -47,7 +47,7 @@ In the View menu at the uppermost toolbar, select "Decorations" -> "Image...":
 
 ![](https://github.com/StormSurgeLive/ugrid-visualization/blob/main/qgis/tutorial-figures/tutorial_screenshot_09.png)
 
-Now, browse for `color_bar.png`, set the size to 75.00 mm, and select "OK". You should now see a color bar at the bottom left of the Map canvas.
+Now, select the "Enable Image" checkbox and browse for `color_bar.png`, set the size to 75.00 mm, and select "OK". You should now see a color bar at the bottom left of the Map canvas.
 
 You can also add other annotations to the visualization, such as a scale bar:
 
