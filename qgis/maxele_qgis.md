@@ -13,7 +13,7 @@ Or, if you prefer to download it through the command line, run the following com
 $ wget https://fortytwo.cct.lsu.edu/thredds/fileServer/2020/laura/27/CTXCS2017/qbc.loni.org/CTXCS2017_al132020_jgf/nhcConsensus/maxele.63.nc
 ```
 
-You will also need the files `maxele_style_file.qml` and `color_bar.png` from the `ugrid-visualization/qgis/qgis-files` directory.
+You will also need the files `maxele_style_file.qml` and `color_bar_qgis.png` from the `ugrid-visualization/qgis/qgis-files` directory.
 
 ## Loading the `maxele.63.nc` file
 
@@ -47,7 +47,7 @@ In the View menu at the uppermost toolbar, select "Decorations" -> "Image...":
 
 ![](https://github.com/StormSurgeLive/ugrid-visualization/blob/main/qgis/tutorial-figures/tutorial_screenshot_09.png)
 
-Now, select the "Enable Image" checkbox and browse for `color_bar.png`, set the size to 75.00 mm, and select "OK". You should now see a color bar at the bottom left of the Map canvas.
+Now, select the "Enable Image" checkbox and browse for `color_bar_qgis.png`, set the size to 75.00 mm, and select "OK". You should now see a color bar at the bottom left of the Map canvas.
 
 You can also add other annotations to the visualization, such as a scale bar:
 
