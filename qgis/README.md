@@ -12,7 +12,7 @@
 
 The tutorials should work on Windows, Mac, or Linux machines, but they have only been tested on Windows. The `getting-started.md` document provides a link to QGIS installation instructions.
 
-For the `fort63_fort74_qgis.md` tutorial, you'll need access to a Unix shell that can install the `nco` package. If you're using a Windows machine, you can use [Windows Subsystem for Linux (WSL)](https://docs.microsoft.com/en-us/windows/wsl/setup/environment). You'll also need `conda` to set up a Python environment. If you haven't used `conda` before, you can find installation instructions for Miniconda [here](https://docs.conda.io/en/latest/miniconda.html).
+For the `fort63_fort74_qgis.md` tutorial, you'll need access to a Unix shell that can install the `nco` package. If you're using a Windows machine, you can use [Windows Subsystem for Linux (WSL)](https://docs.microsoft.com/en-us/windows/wsl/setup/environment). You'll also need `conda` to set up a Python environment. If you haven't used `conda` before, you can find installation instructions for Miniconda [here](https://docs.conda.io/en/latest/miniconda.html). Additionally, if you want to generate an animation like the one shown in this tutorial, you'll need to know how to make a GIF from PNG files (for example, you can do this with the command-line tool `ffmpeg`).
 
 ### QGIS
 
