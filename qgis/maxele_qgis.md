@@ -61,7 +61,7 @@ To save an image from the Map canvas, go to the Project menu at the uppermost to
 
 This will take you to the Save Map as Image menu:
 
-![](https://github.com/StormSurgeLive/ugrid-visualization/blob/main/qgis/tutorial-figures/tutorial_screenshot_11.png)
+![](https://github.com/StormSurgeLive/ugrid-visualization/blob/main/qgis/tutorial-figures/tutorial_screenshot_12.png)
 
 If you select the Draw on Canvas option, then you can draw a box on the Map canvas to specify the lat/lon extent of your visualization. Otherwise, you can also zoom in to a specific area before opening the Save Map as Image menu, and use the Map canvas extent as your lat/lon extent.
 
