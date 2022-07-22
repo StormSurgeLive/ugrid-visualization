@@ -13,7 +13,7 @@ Or, if you prefer to download it through the command line, run the following com
 $ wget https://fortytwo.cct.lsu.edu/thredds/fileServer/2020/laura/27/CTXCS2017/qbc.loni.org/CTXCS2017_al132020_jgf/nhcConsensus/maxele.63.nc
 ```
 
-You will also need the files `maxele_style_file.qml` and `color_bar_qgis.png` from the `ugrid-visualization/qgis/qgis-files` directory.
+You will also need the files [`maxele_style_file.qml`](https://github.com/StormSurgeLive/ugrid-visualization/blob/main/qgis/qgis-files/maxele_style_file.qml) and [`color_bar_qgis.png`](https://github.com/StormSurgeLive/ugrid-visualization/blob/main/qgis/qgis-files/color_bar_qgis.png) from the `ugrid-visualization/qgis/qgis-files` directory.
 
 ## Loading the `maxele.63.nc` file
 
