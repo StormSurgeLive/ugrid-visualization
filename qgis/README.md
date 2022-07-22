@@ -10,7 +10,7 @@
 
 ## Requirements and expected background knowledge
 
-The tutorials should work on Windows, Mac, or Linux machines, but they have only been tested on Windows. The `getting-started.md` will guide you through the QGIS installation steps.
+The tutorials should work on Windows, Mac, or Linux machines, but they have only been tested on Windows. The `getting-started.md` document provides a link to QGIS installation instructions.
 
 For the `fort63_fort74_qgis.md` tutorial, you'll need access to a Unix shell that can install the `nco` package. You'll also need `conda` to set up a Python environment. If you haven't used `conda` before, you can find installation instructions for Miniconda [here](https://docs.conda.io/en/latest/miniconda.html).
 
