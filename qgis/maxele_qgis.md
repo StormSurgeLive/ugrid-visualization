@@ -68,4 +68,7 @@ If you select the Draw on Canvas option, then you can draw a box on the Map canv
 For example, here is a visualization made by zooming in to the area where Hurricane Laura made landfall:
 ![](https://github.com/StormSurgeLive/ugrid-visualization/blob/main/qgis/tutorial-figures/tutorial_figure_1.png)
 
+## Visualizing other maxele.63 files
+
+The `maxele_style_file.qml` is intended for the specific sample file used in this tutorial, so it may not work with other maxele.63 files. However, if you want to use the same color mapping properties for your own files, you can open [the Layer Styling Panel](https://docs.qgis.org/3.22/en/docs/user_manual/introduction/general_tools.html#layer-styling-panel) and see which parameters and settings have been modified.
 
