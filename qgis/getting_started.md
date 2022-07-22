@@ -12,6 +12,8 @@ For resources on QGIS basics, see the `README.md` in this directory.
 
 There are [instructions on the QGIS website](https://qgis.org/en/site/forusers/download.html) for downloading and installing the latest version. You can find installation instructions for Windows, Mac, and Linux machines.
 
+The tutorials in this directory were tested with QGIS versions 3.22.6 and 3.26.0. Although later versions should work as well, you can use one of these versions if you encounter any errors with newer ones.
+
 ## Loading an ADCIRC netCDF file
 
 There are two options for loading an ADCIRC netCDF file into QGIS. The first option is to use the Browser panel to navigate to the file you want to load. Once you get to a netCDF file, you can expand its contents to show different layers, as seen under the `maxele.63.nc` file in this figure:
